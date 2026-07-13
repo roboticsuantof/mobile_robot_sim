@@ -175,7 +175,7 @@
      Pose respecto a base_link: adelante y a media altura
      ═══════════════════════════════════════════════════════ -->
       <sensor name="laser_scan_2d" type="gpu_lidar">
-        <pose>0.37 0 0.20 0 0 0</pose>   <!-- ajusta x/z según tu robot -->
+        <pose>0.37 0 0.50 0 0 0</pose>   <!-- ajusta x/z según tu robot -->
         <always_on>1</always_on>
         <update_rate>20</update_rate>
         <topic>scan</topic>
@@ -196,7 +196,7 @@
             </vertical>
           </scan>
           <range>
-            <min>0.10</min>
+            <min>0.20</min>
             <max>30.0</max>
           </range>
           <noise>
@@ -206,80 +206,6 @@
           </noise>
         </ray>
       </sensor>
-
-   
-      <light name="right_light_source" type="spot">
-        <pose frame="">0.358 -0.133 0.45 3.1415926535897931 1.5707963267948966 -1.5707963267948966</pose>
-        <attenuation>
-          <range>50</range>
-          <linear>0</linear>
-          <constant>0.1</constant>
-          <quadratic>0.0025</quadratic>
-        </attenuation>
-        <diffuse>1.0 1.0 0.63 1</diffuse>
-        <specular>1.0 1.0 0.63 1</specular>
-        <spot>
-          <inner_angle>1</inner_angle>
-          <outer_angle>1.1</outer_angle>
-          <falloff>1</falloff>
-        </spot>
-        <direction>0 0 -1</direction>
-        <cast_shadows>1</cast_shadows>
-      </light>
-      <light name="front_light" type="spot">
-        <pose frame="">0.49 0 0.45 1.5707963267948966 1.5707963267948966 -1.5707963267948966</pose>
-        <attenuation>
-          <range>50</range>
-          <linear>0</linear>
-          <constant>0.1</constant>
-          <quadratic>0.0025</quadratic>
-        </attenuation>
-        <diffuse>0.8 0.8 0.5 1</diffuse>
-        <specular>0.8 0.8 0.5 1</specular>
-        <spot>
-          <inner_angle>1</inner_angle>
-          <outer_angle>1.1</outer_angle>
-          <falloff>1</falloff>
-        </spot>
-        <direction>0 -1 0</direction>
-        <cast_shadows>1</cast_shadows>
-      </light>
-      <light name="left_light_source" type="spot">
-        <pose frame="">0.358 0.133 0.45 0 1.5707963267948966 -1.5707963267948966</pose>
-        <attenuation>
-          <range>50</range>
-          <linear>0</linear>
-          <constant>0.1</constant>
-          <quadratic>0.0025</quadratic>
-        </attenuation>
-        <diffuse>1.0 1.0 0.63 1</diffuse>
-        <specular>1.0 1.0 0.63 1</specular>
-        <spot>
-          <inner_angle>1</inner_angle>
-          <outer_angle>1.1</outer_angle>
-          <falloff>1</falloff>
-        </spot>
-        <direction>0 0 -1</direction>
-        <cast_shadows>1</cast_shadows>
-      </light>
-      <light name="back_light_source" type="spot">
-        <pose frame="">0.26 0 0.46 -1.5707963267948966 1.5707963267948966 -1.5707963267948966</pose>
-        <attenuation>
-          <range>50</range>
-          <linear>0</linear>
-          <constant>0.1</constant>
-          <quadratic>0.0025</quadratic>
-        </attenuation>
-        <diffuse>1.0 1.0 0.63 1</diffuse>
-        <specular>1.0 1.0 0.63 1</specular>
-        <spot>
-          <inner_angle>1</inner_angle>
-          <outer_angle>1.1</outer_angle>
-          <falloff>1</falloff>
-        </spot>
-        <direction>0 0 -1</direction>
-        <cast_shadows>1</cast_shadows>
-      </light>
     </link>
     <link name="Rear_Rocker_Link">
       <pose>-0.047625 0 -0.0254 1.5707963267948966 0 0</pose>
